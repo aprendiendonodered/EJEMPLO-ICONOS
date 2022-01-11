@@ -1,1 +1,389 @@
-[]
+[
+    {
+        "id": "151c9d68.cd4003",
+        "type": "tab",
+        "label": "Ejemplo Iconos",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f9ad1c32.3ae47",
+        "type": "ui_group",
+        "z": "151c9d68.cd4003",
+        "name": "Second",
+        "tab": "2364da96.b03496",
+        "order": 2,
+        "disp": true,
+        "width": "5"
+    },
+    {
+        "id": "90203ef9.93735",
+        "type": "ui_group",
+        "z": "151c9d68.cd4003",
+        "name": "Click",
+        "tab": "2364da96.b03496",
+        "order": 1,
+        "disp": true,
+        "width": "5"
+    },
+    {
+        "id": "d68fec05.c8236",
+        "type": "ui_group",
+        "name": "Template",
+        "tab": "2364da96.b03496",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "2364da96.b03496",
+        "type": "ui_tab",
+        "z": "151c9d68.cd4003",
+        "name": "Ejemplos Iconos",
+        "icon": "link",
+        "order": 11,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1991711a81363fe9",
+        "type": "ui_spacer",
+        "z": "151c9d68.cd4003",
+        "name": "spacer",
+        "group": "90203ef9.93735",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "4e43ce2afbb50e2c",
+        "type": "ui_spacer",
+        "z": "151c9d68.cd4003",
+        "name": "spacer",
+        "group": "f9ad1c32.3ae47",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "18cc6354a1687692",
+        "type": "ui_spacer",
+        "z": "151c9d68.cd4003",
+        "name": "spacer",
+        "group": "f9ad1c32.3ae47",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8cc8927f.8b96e",
+        "type": "inject",
+        "z": "151c9d68.cd4003",
+        "name": "warn",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "press",
+        "payload": "<i class=\"fa fa-warning fa-2x nr-dashboard-warning\"></i>",
+        "payloadType": "str",
+        "x": 250,
+        "y": 140,
+        "wires": [
+            [
+                "33a0a9bf.fb1d26"
+            ]
+        ]
+    },
+    {
+        "id": "7bff29a9.2a6e38",
+        "type": "inject",
+        "z": "151c9d68.cd4003",
+        "name": "error",
+        "props": [
+            {
+                "p": "payload",
+                "v": "<i class=\"fa fa-exclamation-circle fa-2x nr-dashboard-error\"></i>",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "press",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "press",
+        "payload": "<i class=\"fa fa-exclamation-circle fa-2x nr-dashboard-error\"></i>",
+        "payloadType": "str",
+        "x": 250,
+        "y": 180,
+        "wires": [
+            [
+                "33a0a9bf.fb1d26"
+            ]
+        ]
+    },
+    {
+        "id": "97c8a8c2.670878",
+        "type": "inject",
+        "z": "151c9d68.cd4003",
+        "name": "ok",
+        "props": [
+            {
+                "p": "payload",
+                "v": "<i class=\"fa fa-lightbulb-o fa-2x nr-dashboard-ok\"></i>",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "press",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "press",
+        "payload": "<i class=\"fa fa-lightbulb-o fa-2x nr-dashboard-ok\"></i>",
+        "payloadType": "str",
+        "x": 250,
+        "y": 100,
+        "wires": [
+            [
+                "33a0a9bf.fb1d26"
+            ]
+        ]
+    },
+    {
+        "id": "33a0a9bf.fb1d26",
+        "type": "ui_text",
+        "z": "151c9d68.cd4003",
+        "group": "f9ad1c32.3ae47",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "name": "indicator",
+        "label": "Señal:          ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 420,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "633ea18f.4aa6f",
+        "type": "ui_switch",
+        "z": "151c9d68.cd4003",
+        "name": "",
+        "label": "switch",
+        "group": "90203ef9.93735",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 250,
+        "y": 220,
+        "wires": [
+            [
+                "bd2c90fd.a5765"
+            ]
+        ]
+    },
+    {
+        "id": "a0a301e0.d9a",
+        "type": "ui_switch",
+        "z": "151c9d68.cd4003",
+        "name": "",
+        "label": "switch",
+        "group": "90203ef9.93735",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 250,
+        "y": 276,
+        "wires": [
+            [
+                "22bd807f.41819"
+            ]
+        ]
+    },
+    {
+        "id": "bd2c90fd.a5765",
+        "type": "ui_text",
+        "z": "151c9d68.cd4003",
+        "group": "90203ef9.93735",
+        "order": 2,
+        "width": 1,
+        "height": 1,
+        "name": "on/off",
+        "label": "",
+        "format": "<font color={{(msg.payload?\"yellow\":\"grey\")}}><i class=\"fa fa-lightbulb-o fa-2x\"></i></font><br/><font size=\"-2\">World</font>",
+        "layout": "row-center",
+        "x": 410,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "22bd807f.41819",
+        "type": "ui_text",
+        "z": "151c9d68.cd4003",
+        "group": "90203ef9.93735",
+        "order": 1,
+        "width": 1,
+        "height": 1,
+        "name": "on/off",
+        "label": "",
+        "format": "<font color={{(msg.payload?\"red\":\"grey\")}}><i class=\"fa fa-lightbulb-o fa-2x\"></i></font><br/><font size=\"-2\">Hello</font>",
+        "layout": "row-center",
+        "x": 420,
+        "y": 276,
+        "wires": []
+    },
+    {
+        "id": "1e532573.9043cb",
+        "type": "ui_template",
+        "z": "151c9d68.cd4003",
+        "group": "d68fec05.c8236",
+        "name": "",
+        "order": 1,
+        "width": 6,
+        "height": 3,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>\n\n<script>\nvar value = \"hello world\";\n// or overwrite value in your callback function ...\nthis.scope.action = function() { return value; }\n</script>\n\n<md-button ng-click=\"send({payload:action()})\">\n    Click me to send a hello world\n</md-button>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 340,
+        "y": 340,
+        "wires": [
+            [
+                "69096515.74f06c"
+            ]
+        ]
+    },
+    {
+        "id": "87525db3.87506",
+        "type": "inject",
+        "z": "151c9d68.cd4003",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "1e532573.9043cb"
+            ]
+        ]
+    },
+    {
+        "id": "69096515.74f06c",
+        "type": "debug",
+        "z": "151c9d68.cd4003",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 510,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "41b524afbcf9f692",
+        "type": "ui_dropdown",
+        "z": "151c9d68.cd4003",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "icono a mostrar",
+        "group": "f9ad1c32.3ae47",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "ok",
+                "value": "<i class=\"fa fa-lightbulb-o fa-2x nr-dashboard-ok\"></i>",
+                "type": "str"
+            },
+            {
+                "label": "warn",
+                "value": "<i class=\"fa fa-warning fa-2x nr-dashboard-warning\"></i>",
+                "type": "str"
+            },
+            {
+                "label": "error",
+                "value": "<i class=\"fa fa-exclamation-circle fa-2x nr-dashboard-error\"></i>",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 220,
+        "y": 40,
+        "wires": [
+            [
+                "33a0a9bf.fb1d26"
+            ]
+        ]
+    }
+]
